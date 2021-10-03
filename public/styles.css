@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #6C63FF;    
+    --hero-color: #536DFE;
+    --grey-color: #c3c3c3;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 25px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    height: fit-content;
+}
+
+li {
+    vertical-align: center;
+    font-size: 25px;
+    padding: 0 10px;
+    margin-left: 50px;
+    color: #fff;
+}
+
+.container {
+    width: 50%;
+    margin-top: 50px;
+    height: fit-content;
+    background-color: var(--primary-color); 
+    border-radius: 2rem;
+    box-shadow: 0px 15px 15px var(--grey-color);
+}
+
+.container .heading {
+    width: 100%;
+    margin: 10px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.container .heading h1 {
+    font-size: 3rem;
+}
+
+.container .heading span {
+    margin-left: 5px;
+}
+
+form {
+    width: 100%;
+}
+
+.form-items {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form-items input {
+    margin-right: 5px;
+    font-size: 2rem;
+}
+
+.form-items button {
+    padding: 0.3rem;
+    font-size: 1.7rem;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    /* font-size: 20px; */
+}
+
+.tasklist .list-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#done { 
+    margin: 10px 50px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    color: var(--hero-color);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--hero-color);
+    color: #fff;
+    box-shadow: 0px 2px 2px var(--grey-color);
+}
+
+.completed {
+    height: fit-content;
+    background-color: var(--hero-color);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border: 2px solid var(--grey-color);
+}
+
