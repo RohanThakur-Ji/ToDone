@@ -1,0 +1,70 @@
+<html>
+<head> 
+<title> ToDo App </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="heading">
+        <h1>ToDone</h1>
+        <span>An express todo list app.</span>
+    </div>
+
+    <div class="form">
+        <form action="/addtask" method="POST">
+            <div class="form-items">
+                <input type="text" name="newtask" id="addtask" placeholder="Enter your task...">
+                <button id="add">Add Task</button>
+            </div>
+            <div class="tasklist">
+                <h2>Todo Tasks</h2>
+                <ul>
+                    <% for(let i = 0; i < task.length; i++) { %>
+                        <div class="list-container">
+                            <li><input type="checkbox" name="check" value="<%= task[i] %>"><%= task[i] %></li>
+                        </div>
+                    <% } %>
+                </ul>
+                <button formaction="/removetask" type="submit" id="done">Done</button>
+            </div>
+        </form>
+        <div class="completed">
+            <h2>Completed Tasks</h2>
+            <ul>
+                <% for(let i = 0; i < complete.length; i++) { %>
+                    <li><input type="checkbox" class="completed" checked disabled><%= complete[i] %></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<div class="container">
+    <h1>ToDone</h1>
+<form action ="/addtask" method="POST">
+    <div class="form-items">
+        <input type="text" name="newtask" placeholder="Enter your task...">
+        <button id="add"> Add Task </button>
+    </div>
+    <div class="taskList">
+        <h2>Todo Tasks</h2>
+        <% for( var i = 0; i < task.length; i++){ %>
+            <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> <button id="remove">❌</button></li>
+        <% } %>
+        <button formaction="/removetask" type="submit" id="remove"> Remove </button>   
+    </div>
+</form>
+    <div class="complete">
+        <h2> Completed task </h2>
+        <% for(var i = 0; i < complete.length; i++){ %>
+            <li><input type="checkbox" checked><%= complete[i] %> </li>
+        <% } %>
+    </div>
+</div> -->
+
+</body>
+</html>
